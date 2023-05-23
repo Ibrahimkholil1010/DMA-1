@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- Fontawesome  -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a6c1cc8bf8.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+       .Availability-form{
+      margin-top:-100px;
+      z-index:2;
+      /* position: relative; */
+      border-radius: 30px !important;
+      overflow: hidden;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="header  p-0" style="background-color: #0BCAF0;"> 
+        <div class="container s-none" style="background-color: #0BCAF0;  height: 50px;
+        line-height: 50px; ">
+           <div class="d-flex align-items-center justify-content-between top-menu">
+            <div class="left-menu">
+                <ul>
+                    <li><a href="#" > 0330 043 7471</a></li>
+                    <li><a href="#" >booking@indiansairs.com</a></li>
+                </ul>
+            </div>
+            <div class="right-menu">
+                <ul>
+                    <li><a href="#" >Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#" class="text-uppercase">usd</a></li>
+                </ul>
+            </div>
+           </div>
+        </div>
+        <hr class="m-0 p-0" style="border-bottom:2px solid #fff;">
+
+        <div class="container-fluid  sticky-tops" style="background: #0BCAF0; z-index: 99999;">
+          <div class="container" >
+            <nav class="navbar navbar-expand-lg " style="height: 50px;"> 
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+                <button  class="navbar-toggler border-0 shadow-none " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon text-white fs-1" >
+                    <i class="fa-solid fa-bars"></i>
+                  </span>
+                </button>
+                <div class="collapse navbar-collapse p-4" id="navbarSupportedContent">
+                  <ul class="navbar-nav -auto mb-2 mb-lg-0 hhhh position-relative">
+                    <li class="nav-item">
+                      <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="about.html">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="Contact.html"  >Contact</a>
+                    </li>
+                  </ul>
+                   
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <h2 class="Explore">Explore the world together</h2>
+                <h3 class="Find">Find awesome flights, Tickets</h3>
+            </div>
+          </div>
+        </div>
+        <br><br><br><br><br>
+    </div>
+   
+
+    <section id="theme_search_form">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="theme_search_form_area">
+                  <div class="theme_search_form_tabbtn">
+                     <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item m-0" role="presentation">
+                           <button class="nav-link active" id="flights-tab" data-bs-toggle="tab" data-bs-target="#flights" type="button" role="tab" aria-controls="flights" aria-selected="true">
+                           <i class="fas fa-plane-departure" aria-hidden="true"></i>Flights
+                           </button>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="tab-content" id="myTabContent">
+                     <div class="tab-pane fade show active" id="flights" role="tabpanel" aria-labelledby="flights-tab">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="flight_categories_search">
+                                 <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link active" id="oneway-tab" data-bs-toggle="tab" data-bs-target="#oneway_flight" type="button" role="tab" aria-controls="oneway_flight" aria-selected="true" onclick="reply_click(this.id)">
+                                       One
+                                       Way
+                                       </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                       <button class="nav-link text-dark" id="roundtrip-tab" data-bs-toggle="tab" data-bs-target="#roundtrip" type="button" role="tab" aria-controls="roundtrip" aria-selected="false" onclick="reply_click(this.id)">
+                                       Roundtrip
+                                       </button>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+
+                        <br> 
+                        <div class="tab-content" id="myTabContent1">
+                           <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="oneway-tab">
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <div class="oneway_search_form">
+                                       <form class="location-search" method="post" action="https://www.indiansairs.com/search" id="search_form">
+                                          <div class="row">
+                                             <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-2">
+                                                <div class="flight_Search_boxed">
+                                                   <p>From</p>
+                                                   <div class="ui-widget">
+                                                      <input type="text" id="departure" name="fulldeparturecode" placeholder="JFK" autocomplete="off" class="ui-autocomplete-input">
+                                                      <input type="hidden" id="departurecod" name="departurecode">
+                                                   </div>
+                                                   <span id="depart_error">Where you want to depart</span>
+                                                   <div class="plan_icon_posation">
+                                                      <i class="fas fa-plane-departure" aria-hidden="true"></i>
+                                                      <!-- <img src="https://www.indiansairs.com/assets/319.gif" alt="" class="input_preloader"> -->
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-3 col-md-6 col-sm-12 col-12 my-2">
+                                                <div class="flight_Search_boxed">
+                                                   <p>To</p>
+                                                   <div class="ui-widget">
+                                                      <input type="text" id="arrival" name="fullarrivalcode" placeholder="LHR" autocomplete="off" class="ui-autocomplete-input">
+                                                      <input type="hidden" id="arrivalcod" name="arrivalcode">
+                                                   </div>
+                                                   <span id="arrival_error">Where you want to Arrival</span>
+                                                   <div class="plan_icon_posation">
+                                                      <i class="fas fa-plane-arrival" aria-hidden="true"></i>
+                                                   </div>
+                                                   <div class="range_plan">
+                                                      <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-4  col-md-6 col-sm-12 col-12 my-2">
+                                                <div class="form_search_date">
+                                                   <div class="flight_Search_boxed date_flex_area">
+                                                      <div class="Journey_date">
+                                                         <p>Journey date</p>
+                                                         <input type="text" id="depart" name="depart" autocomplete="off" required="" placeholder="Departure" class="hasDatepicker">
+                                                         <span>Select Departure date</span>
+                                                      </div>
+                                                      <div class="Journey_date" id="round_way" style="display: none;">
+                                                         <p>Return date</p>
+                                                         <input type="text" id="to" name="arrival" autocomplete="off" placeholder="Return" class="hasDatepicker">
+                                                         <span>Select Arrival date</span>
+                                                      </div>
+                                                   </div>
+                                                   <input type="hidden" id="flight_type" name="radio" value="one">
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-2  col-md-6 col-sm-12 col-12 my-2">
+                                                <div class="flight_Search_boxed dropdown_passenger_area">
+                                                   <div class="dropdown">
+                                                      <button class="dropdown-toggle final-count" data-toggle="dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      Class
+                                                      </button>
+                                                      <select name="flightclass" style="background-color: #F3F6FD;border: 2px dashed #dddddd75;">
+                                                         <option value="economy">Economy</option>
+                                                         <option value="business">Business</option>
+                                                         <option value="firstclass">First Class</option>
+                                                      </select>
+                                                   </div>
+                                                   <div class="row" style="margin-top: 10px;">
+                                                      <div class="col-lg-3">
+                                                         Adults
+                                                      </div>
+                                                      <div class="col-lg-3">
+                                                         <select name="Adult" style="background-color: #F3F6FD;border: 2px dashed #dddddd75;">
+                                                            <option value="1" selected="true">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                         </select>
+                                                      </div>
+                                                      <div class="col-lg-3">
+                                                         Children
+                                                      </div>
+                                                      <div class="col-lg-3">
+                                                         <select name="Children" style="background-color: #F3F6FD;border: 2px dashed #dddddd75;">
+                                                            <option value="0" selected="true">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="top_form_search_button text-center my-4">
+                                                <button class="btns btn-custom" id="flight_search_btn">Search</button>
+                                             </div>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
+
+   
+<br><br><br><br><br><br>
+    <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+              <h2 class="beyond">Go beyond your <br> imagination</h2>
+              <hr class="w-75 " style="color:aqua">
+              <h4 class="Discover">Discover your ideal experience with us</h4>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+              <div class="img-area">
+                <img src="images/32.jpg" alt="" class="w-100 roundeds">
+                <div class="img-text">
+                  <h3><a href="#">20% Discount for all <br> Airlince</a></h3> 
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+            <div class="img-area">
+              <img src="images/34.jpg" alt="" class="w-100 roundeds">
+              <div class="img-text">
+                <h3><a href="#">Enjoy Expereinces <br>
+                  india
+                </a></h3> 
+              </div>
+            </div>
+        </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+              <div class="img-area">
+                <img src="images/maharashta.jpg" alt="" class="w-100 roundeds">
+                <div class="img-text">
+                  <h3><a href="#">Luxury resorts <br>top deals</a></h3> 
+                </div>
+              </div>
+            </div>
+       </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+
+  <div class="container">
+    <div class="text-center">
+        <h3 class="top">Top destinations</h3>
+        <hr class="w-25 m-auto " style="color:#0BCAF0; height:2px;">
+    </div>
+
+    <br><br><br>
+    <div class="row">
+      <div class="col-lg-6 "> 
+          <div class="img position-relative" >
+            <img src="images/tajmahal.jpg" alt="" class="w-100">
+              <div class="img-texts position-absolute w-100 text-center" style="top:0">
+                <h5 class="text-white mt-2 fs-2 fw-bold">Up to</h5>
+                <h2 class="d-flex align-items-center my-0" style="margin-left:240px;margin-top: -20px !important" >
+                  <span class="text-white fw-normal" style="font-size:150px">
+                    20
+                  </span>
+                  
+                  <div class="block ">
+                    <span class="pra fs-3 text-white fw-bold">  % </span>
+                    <span class="off d-block fs-1 fs-3 text-white fw-bold" >Off</span>
+                  </div>
+
+                  </h2>
+                  <h2 class="text-white fw-bold" style="margin-top: -10px;">
+                    Holiday  <br>
+                    packages
+                  </h2>
+
+                  <a href="#" class="btn btn-lg btn-custom btns">Book Now</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-6">
+       <div class="row">
+          <div class="col-lg-4">
+            <div class="img position-relative">
+              <img src="images/indianflag.jpg" alt="" class="w-100">
+              <div class="position-absolute" style="top:50%;left:50%; transform: translate(-50%,-50%);">
+                <h2 class="text-white fs-4">India</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="img position-relative">
+                  <img src="images/tajmahal.jpg" alt="" class="w-100">
+                  <div class="position-absolute" style="top:50%;left:50%; transform: translate(-50%,-50%);">
+                    <h2 class="text-white fs-4">Mumbai</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="img position-relative" >
+                  <img src="images/Agra.jpg" alt="" class="w-100">
+                  <div class="position-absolute" style="top:50%;left:50%; transform: translate(-50%,-50%);">
+                    <h2 class="text-white fs-4">Agra</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="img position-relative">
+                  <img src="images/Jaipur.jpg" alt="" class="w-100">
+                  <div class="position-absolute" style="top:50%;left:50%; transform: translate(-50%,-50%);">
+                    <h2 class="text-white fs-4">Jaipur</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="img position-relative">
+                  <img src="images/GOV.jpg" alt="" class="w-100">
+                  <div class="position-absolute" style="top:50%;left:50%; transform: translate(-50%,-50%);">
+                    <h2 class="text-white fs-4">GOA</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+       <div class="row">
+          <div class="col-lg-6">
+              <div class="img w-75 position-relative">
+                  <img src="images/41.jpg" alt="" class="w-100">
+                  <div class="position-absolute" style="top:50%;left:50%; transform: translate(-50%,-50%);">
+                    <h2 class="text-white fs-4">Derjaling</h2>
+                  </div>
+              </div>
+          </div>
+            <div class="col-lg-6" style="text-align: right;">
+                <a href="#" class="btn btn-lf btns btn-custom">View all</a>
+            </div>
+       </div>
+    </div>
+    </div>
+  </div>
+
+  <br> 
+
+  <div class="container-fluid  p-5" style="background-color: #F3F6FD;">
+    <br>
+    <div class="container" >
+        <div class="row align-items-center">
+           <div class="col-lg-7 p-0 m-0">
+               <li class="list-style-none d-flex align-items-center">
+                 <img src="images/email.png" alt="" width="90" height="90">
+                   <div class="blocks  mx-3 mt-3" >
+                     <h3>Get the latest news and offers</h3>
+                     <h2>Subscribe to our newsletter</h2>
+                   </div>
+               </li>
+           </div>
+           <div class="col-lg-5 p-0 m-0" style="text-align: right;">
+               <div class="input-area w-100">
+                   <input type="text" placeholder="Enter Your Email" class=" w-100 shadow border-0 outline-none">
+                   <button class=" btns btn-customs"  >Subcribe</button>
+               </div>
+           </div>
+        </div>
+     </div>
+    <br>
+   </div>
+   <br><br><br><br>
+<footer>
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+              <h2 class="fs-5 m-0 fw-bold">Need any help?</h2>
+              <hr class="w-50 "  style="color:#0BCAF0">
+              <div class="borders">
+                <h2>Call 24/7 for any help</h2>
+                <h3>0330 043 7471</h3>
+              </div>
+              <div class="borders">
+                <h2>Mail to our support team</h2>
+                <h3>booking@indiansairs.com</h3>
+              </div>
+              <div class="borders">
+                <h2>Follow us on</h2>
+                <span><i class="fa-brands fa-facebook-f"></i></span>
+                <span><i class="fa-brands fa-instagram"></i></span>
+              </div>
+          </div>
+          <div class="col-lg-3 ml-3">
+            <div class="footer- box">
+              <h2 class="fs-5 m-0 fw-bold">About Indiansairs</h2>
+              <hr class="w-75 "  style="color:#0BCAF0">
+              <ul class="footer-ul m-0 p-0">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Cheap Flights</a></li>
+                  <li><a href="#">Group Travel</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="footer- box">
+              <h2 class="fs-5 m-0 fw-bold">About Indiansairs</h2>
+              <hr class="w-75 "  style="color:#0BCAF0">
+              <ul class="footer-ul m-0 p-0">
+                  <li><a href="#">Check My Booking</a></li>
+                  <li><a href="#">Customer Support</a></li>
+                  <li><a href="#">Airline Baggage Fees</a></li>
+                  <li><a href="#">FAQs</a></li> 
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="footer- box">
+              <h2 class="fs-5 m-0 fw-bold">About Indiansairs</h2>
+              <hr class="w-75 "  style="color:#0BCAF0">
+              <ul class="footer-ul m-0 p-0">
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Price Match Promise</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Taxes & Fees</a></li>
+                  <li><a href="#">Post-Ticketing Fees</a></li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+</footer>
+  <!-- Subscribe to our newsletter -->
+<!-- boostrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <!-- fontawesome -->
+ <script src="https://kit.fontawesome.com/a6c1cc8bf8.js" crossorigin="anonymous"></script>
+
+ <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector('.sticky-tops');
+      header.classList.toggle('sticky',window.scrollY > 0 );
+    })
+ </script>
+</body>
+</html>
